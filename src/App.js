@@ -4,9 +4,10 @@ import Header from "./components/Header";
 import Projects from "./components/Projects";
 import Comments from "./components/Comments";
 import { Container } from "@mui/system";
-import Background from "./components/Background";
+import Beach from "./components/Beach";
 import About from "./components/About";
 import { createTheme, ThemeProvider } from "@mui/material";
+import Background from "./components/Background";
 
 function App() {
   const theme = createTheme({
@@ -15,12 +16,13 @@ function App() {
         'Solway',
         'serif'
       ].join(','),
-    }
+    },
   });
 
   return (
     <ThemeProvider theme={theme}>
     <div className="App">
+      <Beach />
       <Background />
       <Container>
       <HashRouter>

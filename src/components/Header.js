@@ -1,5 +1,5 @@
 import React from "react";
-import {Typography,CssBaseline,Toolbar,IconButton,Button, Menu, MenuItem, useMediaQuery, Box} from "@mui/material";
+import {CssBaseline,Toolbar,IconButton,Button, Menu, MenuItem, useMediaQuery, Box} from "@mui/material";
 import CottageIcon from '@mui/icons-material/Cottage';
 import { Stack } from "@mui/system";
 import { Link } from "react-router-dom";
@@ -32,8 +32,10 @@ const TopBar = () =>{
           <Stack id="buttonLinks" direction="row" spacing={2}>
             <Button color="inherit" to="/projects" component={Link}>Projects</Button>
             <Button color="inherit" to="/comments" component={Link}>Comments</Button>
-            <Button color="inherit" to="/about" component={Link}>About</Button>
-            <IconButton color="inherit" href="https://github.com/WobniarelbuoD" target="_blank"><GitHubIcon size="large" edge="start" color="inherit" aria-label="logo" />Github</IconButton>
+            <Button color="inherit" to="/about" component={Link}>About Me</Button>
+            <IconButton color="inherit" href="https://github.com/WobniarelbuoD" target="_blank">
+              <GitHubIcon size="large" edge="start" color="inherit" aria-label="logo" />Github
+            </IconButton>
           </Stack>
           </Box>}
           
@@ -41,8 +43,12 @@ const TopBar = () =>{
       <Menu id="basic-menu" anchorEl={anchorEl} open={open} onClose={handleClose} MenuListProps={{'aria-labelledby': 'basic-button',}}>
             <MenuItem onClick={handleClose}><Button color="inherit" to="projects" component={Link}>Projects</Button></MenuItem>
             <MenuItem onClick={handleClose}><Button color="inherit" to="/comments" component={Link}>Comments</Button></MenuItem>
-            <MenuItem onClick={handleClose}><Button color="inherit" to="/about" component={Link}>About</Button></MenuItem>
-            <MenuItem onClick={handleClose}><IconButton color="inherit" href="https://github.com/WobniarelbuoD" target="_blank"><GitHubIcon size="large" edge="start" color="inherit" aria-label="logo" />Github</IconButton></MenuItem>
+            <MenuItem onClick={handleClose}><Button color="inherit" to="/about" component={Link}>About Me</Button></MenuItem>
+            <MenuItem onClick={handleClose}>
+              <IconButton color="inherit" href="https://github.com/WobniarelbuoD" target="_blank">
+                <GitHubIcon size="large" edge="start" color="inherit" aria-label="logo" />Github
+              </IconButton>
+            </MenuItem>
       </Menu>
         </Toolbar>
       </Box> 

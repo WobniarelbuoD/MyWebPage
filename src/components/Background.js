@@ -1,9 +1,9 @@
+import { Box } from '@mui/system';
 import React from 'react';
-import Image from "../images/background.jpg"
 
 const Background = () => {
     return (
-        <div style={{backgroundImage:`url(${Image})`,width: "100vw",height: "75vh",position: "fixed",zIndex: -10, backgroundRepeat: 'no-repeat', backgroundSize:"cover", backgroundPosition: "center", filter: 'blur(2px)'}}></div>
+<Box sx={{background:"#EEEEEE", width:"100vw", height:"100vh", zIndex: -100, position:"fixed"}}></Box>
     );
 };
 
