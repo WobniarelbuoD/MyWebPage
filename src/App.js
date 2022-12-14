@@ -8,6 +8,7 @@ import Beach from "./components/Beach";
 import About from "./components/About";
 import { createTheme, ThemeProvider } from "@mui/material";
 import Background from "./components/Background";
+import Footer from "./components/Footer";
 
 function App() {
   const theme = createTheme({
@@ -24,7 +25,7 @@ function App() {
     <div className="App">
       <Beach />
       <Background />
-      <Container>
+      <Container minHeight="100vh">
       <HashRouter>
         <Header />
         <Routes sx={{textAlign:'center'}}>
@@ -35,6 +36,7 @@ function App() {
         </Routes>
       </HashRouter>
       </Container>
+      <Footer />
     </div>
     </ThemeProvider>
   );

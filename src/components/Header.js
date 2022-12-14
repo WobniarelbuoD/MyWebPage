@@ -1,5 +1,5 @@
-import React from "react";
-import {CssBaseline,Toolbar,IconButton,Button, Menu, MenuItem, useMediaQuery, Box} from "@mui/material";
+import React, { useEffect, useState } from "react";
+import {CssBaseline,Toolbar,IconButton,Button, Menu, MenuItem, useMediaQuery, Box, Typography} from "@mui/material";
 import CottageIcon from '@mui/icons-material/Cottage';
 import { Stack } from "@mui/system";
 import { Link } from "react-router-dom";
@@ -21,10 +21,26 @@ const TopBar = () =>{
     const theme = useTheme();
     const matches = useMediaQuery(theme.breakpoints.down('sm'));
 
+
+const [scrollPosition, setScrollPosition] = useState(0);
+const handleScroll = () => {
+    const position = window.pageYOffset;
+    setScrollPosition(position);
+};
+
+useEffect(() => {
+    window.addEventListener('scroll', handleScroll, { passive: true });
+
+    return () => {
+        window.removeEventListener('scroll', handleScroll);
+    };
+}, []);
+
+const topCheck = scrollPosition <= 200 ? "hsla(0,0%,90%,.7)" : "hsla(0,0%,90%,1)" ;
   return(
     <>
       <CssBaseline /> 
-      <Box component={StickyBox} offsetTop={30} sx={{backgroundColor:"hsla(0,0%,90%,.7)", borderRadius:"20px"}}>
+      <Box component={StickyBox} offsetTop={30}sx={{backgroundColor:topCheck, borderRadius:"20px",  boxShadow:"4px 4px 4px #000000"}}>
         <Toolbar>
           <IconButton to="/" component={Link}><CottageIcon size="large" edge="start" color="inherit" aria-label="logo" /></IconButton>
 

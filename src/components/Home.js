@@ -29,7 +29,7 @@ const Home = () => {
     const theme = useTheme();
     const matches = useMediaQuery(theme.breakpoints.down('md'));
     return (
-        <>
+        <Box minHeight={"100vh"}>
         {!matches &&
         <Bubble />
         }
@@ -40,7 +40,7 @@ const Home = () => {
             <Typography variant="h3">I'm A Fullstack Developer.</Typography>
             <Typography variant="h5">I'm a Lithuanian programmer that loves thinking outside of the box.</Typography>
         </Grid>}
-
+{/* 
         <Box>
             <Card variant="outlined"> 
             <Typography textAlign={"center"}  color={Primal} paddingTop="50px" variant="h3">My Languages</Typography>
@@ -51,9 +51,8 @@ const Home = () => {
                         })}
                 </Grid>
             </Card>
+        </Box> */}
         </Box>
-        </>
-
     );
 };
 
