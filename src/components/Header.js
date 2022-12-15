@@ -40,7 +40,7 @@ const topCheck = scrollPosition <= 200 ? "hsla(0,0%,0%,.7)" : "hsla(0,0%,0%,1)" 
   return(
     <>
       <CssBaseline /> 
-      <Box component={StickyBox} offsetTop={30}sx={{backgroundColor:topCheck, borderRadius:"20px",  boxShadow:"4px 4px 4px #ffffff"}}>
+      <Box component={StickyBox} offsetTop={30}sx={{backgroundColor:topCheck, borderRadius:"20px",  boxShadow:"4px 4px 4px #ffffff", zIndex:"1000"}}>
         <Toolbar>
           <IconButton to="/" component={Link}><CottageIcon size="large" edge="start" color="inherit" aria-label="logo" /></IconButton>
 
@@ -50,7 +50,7 @@ const topCheck = scrollPosition <= 200 ? "hsla(0,0%,0%,.7)" : "hsla(0,0%,0%,1)" 
             <Button color="inherit" to="/projects" component={Link}>Projects</Button>
             <Button color="inherit" to="/comments" component={Link}>Comments</Button>
             <Button color="inherit" to="/about" component={Link}>About Me</Button>
-            
+
             <IconButton color="inherit" href="https://github.com/WobniarelbuoD" target="_blank">
               <GitHubIcon size="large" edge="start" color="inherit" aria-label="logo" />Github
             </IconButton>
