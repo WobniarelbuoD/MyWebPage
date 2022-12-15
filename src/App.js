@@ -12,9 +12,9 @@ import Footer from "./components/Footer";
 
 function App() {
   const theme = createTheme({
-    palette: {
-      mode: 'dark',
-    },
+    // palette: {
+    //   mode: 'dark',
+    // },
     typography:{
       fontFamily:[
         'Solway',

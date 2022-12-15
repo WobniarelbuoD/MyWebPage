@@ -3,7 +3,6 @@ import { green } from '@mui/material/colors';
 import React from 'react';
 import Typed from 'react-typed';
 import profile from "../images/profile.png"
-import bubble from "../images/bubble.png"
 
 const Bubble = () => {
     const Primal = green[600]
@@ -12,7 +11,7 @@ const Bubble = () => {
                     <Grid container padding="20vh 0 10vh 0">
             <Grid item xs={12} md={4}><img src={profile} width="100%" alt="profile"/></Grid>
             <Grid item xs={12} md={8}>
-                <Card sx={{border:"solid 8px white", borderRadius:"40px", marginTop:"4vh"}}>
+                <Card sx={{border:"solid 8px black", borderRadius:"40px", marginTop:"4vh"}}>
                     <Container>
                         <Box padding={"20px"} minHeight={"280px"}>
                         <Typography fontSize="2.5rem">

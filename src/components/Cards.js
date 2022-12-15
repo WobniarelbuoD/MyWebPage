@@ -11,7 +11,7 @@ const Cards = (props) => {
                         <CardContent padding="50px">
                             <Box minHeight={"200px"}>
                                 <Typography color={Primal} variant='h4'>{props.title}</Typography>
-                                <Typography variant='string'>{props.text}</Typography>
+                                <Typography fontSize="1.4rem" variant='string'>{props.text}</Typography>
                             </Box>
                         </CardContent>
                     </Card>
