@@ -30,28 +30,26 @@ const Home = () => {
     const matches = useMediaQuery(theme.breakpoints.down('md'));
     return (
         <Box minHeight={"100vh"}>
-        {!matches &&
         <Bubble />
-        }
 
-        {matches &&
+        {/* {matches &&
         <Grid container padding="5vh 0 3vh 0">
             <Typography variant="h4">Hi. I'm Lukas.</Typography>
             <Typography variant="h3">I'm A Fullstack Developer.</Typography>
             <Typography variant="h5">I'm a Lithuanian programmer that loves thinking outside of the box.</Typography>
-        </Grid>}
-{/* 
+        </Grid>} */}
+
         <Box>
-            <Card variant="outlined"> 
-            <Typography textAlign={"center"}  color={Primal} paddingTop="50px" variant="h3">My Languages</Typography>
-                <Grid padding="20px" spacing={3} textAlign={"center"} container>
+            <Card sx={{borderRadius:"30px"}} variant="outlined"> 
+            <Typography textAlign={"center"} paddingTop="50px" variant="h3">Languages A Frameworks</Typography>
+                <Grid padding="40px" spacing={3} textAlign={"center"} container>
 
                 {cardsContents.map((item,index) => {
                     return <Cards key={index} title={item.title} text={item.text}/>
                         })}
                 </Grid>
             </Card>
-        </Box> */}
+        </Box>
         </Box>
     );
 };

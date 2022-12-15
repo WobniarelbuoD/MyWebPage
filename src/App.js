@@ -12,6 +12,9 @@ import Footer from "./components/Footer";
 
 function App() {
   const theme = createTheme({
+    palette: {
+      mode: 'dark',
+    },
     typography:{
       fontFamily:[
         'Solway',
@@ -19,13 +22,13 @@ function App() {
       ].join(','),
     },
   });
-
+  
   return (
     <ThemeProvider theme={theme}>
     <div className="App">
       <Beach />
       <Background />
-      <Container minHeight="100vh">
+      <Container>
       <HashRouter>
         <Header />
         <Routes sx={{textAlign:'center'}}>
@@ -36,7 +39,7 @@ function App() {
         </Routes>
       </HashRouter>
       </Container>
-      <Footer />
+      {/* <Footer /> */}
     </div>
     </ThemeProvider>
   );
