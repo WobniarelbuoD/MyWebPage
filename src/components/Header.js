@@ -43,12 +43,7 @@ useEffect(() => {
     };
 }, []);
 
-const [page, setPage] = useState("")
-useEffect(() => {
-  setPage(window.frames.location.hash);
-});
-
-const topCheck = scrollPosition <= 200 ? "hsla(0,0%,90%,.7)" : "hsla(0,0%,90%,1)" ;
+const topCheck = scrollPosition <= 200 ? "hsla(0,0%,90%,.7)" : "hsla(110,50%,50%,1)" ;
   return(
     <>
       <CssBaseline /> 

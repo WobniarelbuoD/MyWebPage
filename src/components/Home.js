@@ -1,6 +1,4 @@
-import { useTheme } from '@emotion/react';
-import { Card, Grid, Typography, useMediaQuery } from '@mui/material';
-import { green } from '@mui/material/colors';
+import { Card, Grid, Typography} from '@mui/material';
 import { Box } from '@mui/system';
 import Cards from './Cards';
 import Bubble from './Bubble';
@@ -25,23 +23,16 @@ const Home = () => {
         {title:"Laravel",
         text:"Laravel was deffinetly my biggest challenge learning factories, seeders and security was not easy. But after learning the basics i have finally created a website with a database, logins and structures."},
     ];
-    const Primal = green[600]
-    const theme = useTheme();
-    const matches = useMediaQuery(theme.breakpoints.down('md'));
+    // const Primal = green[600]
+    // const theme = useTheme();
+    // const matches = useMediaQuery(theme.breakpoints.down('md'));
     return (
         <Box minHeight={"100vh"}>
         <Bubble />
 
-        {/* {matches &&
-        <Grid container padding="5vh 0 3vh 0">
-            <Typography variant="h4">Hi. I'm Lukas.</Typography>
-            <Typography variant="h3">I'm A Fullstack Developer.</Typography>
-            <Typography variant="h5">I'm a Lithuanian programmer that loves thinking outside of the box.</Typography>
-        </Grid>} */}
-
         <Box>
             <Card sx={{borderRadius:"30px"}} variant="outlined"> 
-            <Typography textAlign={"center"} paddingTop="50px" variant="h3">Languages A Frameworks</Typography>
+            <Typography textAlign={"center"} paddingTop="50px" variant="h3">Languages And Frameworks</Typography>
                 <Grid padding="40px" spacing={3} textAlign={"center"} container>
 
                 {cardsContents.map((item,index) => {
